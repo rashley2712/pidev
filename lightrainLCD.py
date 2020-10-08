@@ -23,7 +23,7 @@ while True:
     lcd.cursor_pos = (1, 0)
     lcd.write_string("Date: %s" %time.strftime("%d/%m/%Y"))
     lcd.cursor_pos = (2, 0)
-    lightValue = int(lightchan.voltage/3.0 * 100)
+    lightValue = int(lightchan.voltage/3.3 * 100)
     lcd.write_string("Light: %d%%\n" %lightValue)
     rainValue = int(100 - rainchan.voltage/3.3 * 100)
     #print(chan.value, chan.voltage)
